@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aquarium Lighting & Photoperiod Guide</title>
+        <meta name="description" content="Calculate the ideal light duration for your aquarium to balance plant growth and prevent algae.">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="icon" href="./assets/favicon/favicon-48x48.png" type="image/png">
+    </head>
+    <body>
+        <div class="page-shell">
+            <header class="hero">
+                <img class="logo" src="./assets/logo/logo.png" alt="Aquarium Lighting Logo">
+                <p>Find the ideal lighting schedule to keep your plants thriving and algae away.</p>
+            </header>
+            <section class="card">
+                <div class="form-group">
+                    <label for="setup-type">Setup Category</label>
+                    <select id="setup-type" aria-label="Setup Category">
+                        <option value="fish-only">Fish Only (Minimal Plants)</option>
+                        <option value="low-tech">Low-Tech Planted (No CO2)</option>
+                        <option value="high-tech">High-Tech Planted (CO2 & Ferts)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="algae-status">Current Algae</label>
+                    <select id="algae-status" aria-label="Algae Status">
+                        <option value="none">No Algae</option>
+                        <option value="minor">Minor Green Spot/Dust</option>
+                        <option value="major">Major Algae Bloom</option>
+                    </select>
+                </div>
+                <div class="button-row">
+                    <button type="button" class="btn-calculate" onclick="calculateLighting()">Get Recommendation</button>
+                    <button type="button" class="btn-clear" onclick="clearAll()">Clear All</button>
+                </div>
+                <div id="result" aria-live="polite"></div>
+            </section>
+            <section class="content-glue">
+                <h2>The Science of Photoperiod</h2>
+                <p>The "photoperiod" is the total number of hours your lights are on. Too much light causes algae; too little light causes plant die-off.</p>
+                <h3>Consistency is Key</h3>
+                <p>Use a digital timer to ensure your lights turn on and off at the exact same time every day. Fluctuating light schedules are a leading cause of black beard algae (BBA).</p>
+                <h3>The Algae "Siesta"</h3>
+                <p>Some hobbyists use a "siesta" period—turning lights off for 1-2 hours in the middle of the day. This can help CO2 levels recover in low-tech tanks and disrupt the growth cycle of certain algae types.</p>
+            </section>
+            <footer class="footer-note">Combine consistent lighting with regular water changes for a crystal-clear tank.</footer>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
